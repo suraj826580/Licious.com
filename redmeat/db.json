@@ -1,0 +1,120 @@
+{
+  "food": [
+    {
+      "id": 1,
+      "title": "Today's Deals",
+      "image": "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/cb6e4eb8-6aec-7872-1638-0c2cf7970b71/original/Todays_Deals.png"
+    },
+    {
+      "id": 2,
+      "title": "Chicken",
+      "image": "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/07ee9c6c-2f08-9aa6-2721-436950267c96/original/Chicken_20.png"
+    },
+    {
+      "id": 3,
+      "title": "Fish and Seafood",
+      "image": "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/ff043c52-cba7-a63a-2050-2335e011fa55/original/FIsh_(3).png"
+    },
+    {
+      "id": 4,
+      "title": "Mutton",
+      "image": "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/a66990a5-ad16-08e9-75f2-9bb2dd490801/original/Mutton_20.png"
+    },
+    {
+      "id": 5,
+      "title": "Ready to cook",
+      "image": "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/f06c1bad-2e06-832a-cdc1-14571353bba9/original/RTC_(2).png"
+    },
+    {
+      "id": 6,
+      "title": "Prawns",
+      "image": "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/f4053965-f199-80a0-2551-d85d712574e2/original/Prawn_(2).png"
+    },
+    {
+      "id": 7,
+      "title": "Cold Cuts",
+      "image": "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/49a8dd0c-7254-0b89-b348-b57281c76f5a/original/Coldcuts_(2).png"
+    },
+    {
+      "id": 8,
+      "title": "Egg",
+      "image": "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/1bd08fae-c971-390a-ce8a-6f6502f5bd0d/original/Eggs_(1).png"
+    },
+    {
+      "id": 9,
+      "title": "Biryani & Kebab",
+      "image": "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/0b7ccd0f-0811-c38b-5420-0317c8006bda/original/Biryani_(2).png"
+    },
+    {
+      "id": 10,
+      "title": "Plant Based Meat",
+      "image": "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/66e49926-d949-dfb3-2e79-8052d07f0a3b/original/PBM_6_(8).png"
+    },
+    {
+      "id": 11,
+      "title": "Meat Masala",
+      "image": "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/3f37d093-81cf-3c66-115a-2a4575420d68/original/Masala_1200x840_web.png"
+    },
+    {
+      "id": 12,
+      "title": "Spreads",
+      "image": "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/1765bfd0-521a-2fa1-e0ac-2ae0ddf7af96/original/spreads-icon_(1).jpg"
+    }
+  ],
+  "cards": [
+    {
+      "images": "https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/a917c576-c350-375a-afad-4882c7fd85a8/original/Classic-Eggs---Pack-of-12-Hero-Shot.jpg?format=webp",
+      "title": "Classoc Egg -Pack of  12",
+      "description": "White shell eggs laid by healthy hens.",
+      "quantity": "12",
+      "mrp": "145",
+      "price": "116",
+      "discount": "20% OFF"
+    },
+    {
+      "images": "https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/233fa0d5-e6d8-fb39-85b5-959871c2f2c6/original/p0_tile_images-07_(1).jpg?format=webp",
+      "title": "Classoc Egg -Pack of  12",
+      "description": "White shell eggs laid by healthy hens.",
+      "quantity": "12",
+      "mrp": "145",
+      "price": "116",
+      "discount": "20% OFF"
+    },
+    {
+      "images": "https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/a917c576-c350-375a-afad-4882c7fd85a8/original/Classic-Eggs---Pack-of-12-Hero-Shot.jpg?format=webp",
+      "title": "Classoc Egg -Pack of  12",
+      "description": "White shell eggs laid by healthy hens.12",
+      "quantity": "12",
+      "mrp": "145",
+      "price": "116",
+      "discount": "20% OFF"
+    },
+    {
+      "images": "https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/c6ce2468-4681-c255-4df6-b961f2cb28d9/original/Goat-Boneless-Hero-Shot.jpg?format=webp",
+      "title": "Classoc Egg -Pack of  12",
+      "description": "White shell eggs laid by healthy hens.",
+      "quantity": "12",
+      "mrp": "145",
+      "price": "116",
+      "discount": "20% OFF"
+    },
+    {
+      "images": "https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/ac53a507-4bdd-92cd-ee0b-c96281e04999/original/chicken-curry-cut.jpg?format=webp",
+      "title": "Classoc Egg -Pack of  12",
+      "description": "White shell eggs laid by healthy hens.",
+      "quantity": "12",
+      "mrp": "145",
+      "price": "116",
+      "discount": "20% OFF"
+    },
+    {
+      "images": "https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/58b7f670-6e56-a198-73a6-039b07182868/original/ChickenLC.jpg?format=webp",
+      "title": "Classoc Egg -Pack of  12",
+      "description": "White shell eggs laid by healthy hens.12",
+      "quantity": "12",
+      "mrp": "145",
+      "price": "116",
+      "discount": "20% OFF"
+    }
+  ]
+}
