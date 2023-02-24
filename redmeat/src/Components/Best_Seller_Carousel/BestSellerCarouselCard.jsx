@@ -18,7 +18,7 @@ function BestSellerCarouselCard(props) {
     <Flex p={3} w="full" alignItems="center" justifyContent="center">
       <Box
         style={{
-          "box-shadow": "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+          boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
           borderRadius: "10px",
           overflow: "hidden",
         }}>

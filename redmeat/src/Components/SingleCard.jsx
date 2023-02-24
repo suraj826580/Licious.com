@@ -21,7 +21,7 @@ export default function SinleCard(props) {
           // bg={useColorModeValue("white", "gray.800")}
           rounded={"lg"}>
           <Box
-            style={{ "box-shadow": "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" }}
+            style={{ "boxShadow": "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" }}
             rounded={"lg"}
             p={3}
             mt={-12}
