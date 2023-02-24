@@ -8,7 +8,6 @@ import {
   Collapse,
   Image,
   Icon,
-  Link,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -23,10 +22,13 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-import { transform } from "framer-motion";
 import logo from "../Images/logo.png";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { GlobalContext } from "./Context/GlobalContext";
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+  const { btnRef, onOpen } = useContext(GlobalContext);
 
   return (
     <Box>
@@ -66,7 +68,9 @@ export default function WithSubnavigation() {
             color={useColorModeValue("gray.800", "white")}>
             <Link href="#">
               <Box w={"150px"}>
-                <Image src={logo} alt={"logo"} w={"100%"} />
+                <Link to="/">
+                  <Image src={logo} alt={"logo"} w={"100%"} />
+                </Link>
               </Box>
             </Link>
           </Text>
@@ -110,11 +114,12 @@ export default function WithSubnavigation() {
             Categories
           </Button>
           <Button
+            ref={btnRef}
+            onClick={onOpen}
             as={"a"}
             fontSize={"md"}
             fontWeight={400}
-            variant={"link"}
-            href={"#"}>
+            variant={"link"}>
             Log In
           </Button>
           <Button
