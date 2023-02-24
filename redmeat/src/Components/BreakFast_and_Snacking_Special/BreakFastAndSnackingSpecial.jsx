@@ -3,15 +3,20 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Box, Image, Heading } from "@chakra-ui/react";
-import BestSellerCarouselCard from "./BestSellerCarouselCard";
 import axios from "axios";
-export default function BestSeller(props) {
+import BreakFastAndSnackingCard from "./BreakFastAndSnackingCard";
+
+export default function BreakFastAndSnacking(props) {
   const [data, setdata] = useState([]);
   const getData = () => {
     axios
-      .get("http://localhost:8080/cards")
+      .get("https://63c71d3cd307b76967472ac6.mockapi.io/products")
       .then((res) => {
-        setdata(res.data);
+        const filterarray = res.data.filter(
+          (el, id) => el.type === "BreakfastAndSnacking"
+        );
+          
+        setdata(filterarray);
       })
       .catch((err) => console.log(err));
   };
@@ -56,7 +61,16 @@ export default function BestSeller(props) {
   };
   return (
     <>
-      <Heading fontSize={"25px"} fontWeight={"600"} position="relative" left={"12%"} mt={4} color={"#4f4a4b"}> {props.heading}</Heading>
+      <Heading
+        fontSize={"25px"}
+        fontWeight={"600"}
+        position="relative"
+        left={"12%"}
+        mt={4}
+        color={"#4f4a4b"}>
+        {" "}
+        {props.heading}
+      </Heading>
       <Slider
         {...settings}
         settings={{
@@ -79,7 +93,7 @@ export default function BestSeller(props) {
           margin: "auto",
         }}>
         {data.map((item) => (
-          <BestSellerCarouselCard {...item} key={Math.random()} />
+          <BreakFastAndSnackingCard {...item} key={Math.random()} />
         ))}
       </Slider>
     </>

@@ -1,15 +1,10 @@
 import React from "react";
 
-import {
-  Box,
-  Center,
-  Flex,
-  Link,
-} from "@chakra-ui/react";
+import { Box, Center, Flex, Link } from "@chakra-ui/react";
 export default function RedBox() {
   return (
     <Center mt={50}>
-      <Box w={"60%"} borderRadius={10} p={2} bg={"#fdebec"} P={4}>
+      <Box w={"60%"} borderRadius={10} p={4} bg={"#fdebec"}>
         <Flex
           justifyContent={"space-between"}
           alignItems={"center"}

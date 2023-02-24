@@ -6,7 +6,15 @@ import { GridItem, Grid, Heading, Stack, Box } from "@chakra-ui/react";
 export default function ShopByCategoiries(props) {
   const [Data, setData] = useState([]);
   const getData = () => {
-    axios.get("http://localhost:8080/food").then((res) => setData(res.data));
+    axios
+      .get("https://63c71d3cd307b76967472ac6.mockapi.io/products")
+      .then((res) => {
+        const filterarray = res.data.filter(
+          (el, id) => el.type === "categories"
+        );
+
+        return setData(filterarray);
+      });
   };
   React.useEffect(() => {
     getData();
