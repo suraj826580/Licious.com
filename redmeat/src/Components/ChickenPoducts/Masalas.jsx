@@ -1,34 +1,27 @@
 import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProductCard from "./ChickenCard";
 import { Center, Flex, Grid, Heading, Spinner } from "@chakra-ui/react";
-import { GlobalContext } from "../Context/GlobalContext";
 
-export default function ChickenProducts() {
+export default function Masalas() {
   const [loading, setloading] = useState(false);
   const [Data, setData] = useState([]);
-  const { inpuText } = useContext(GlobalContext);
-  console.log(inpuText);
   const getData = () => {
     setloading(true);
     axios
-      .get("https://63c71d3cd307b76967472ac6.mockapi.io/products", {
-        params: {
-          q: inpuText,
-        },
-      })
+      .get("https://63c71d3cd307b76967472ac6.mockapi.io/products")
       .then((res) => {
-        const arr = res.data.filter((item) => item.type == "chicken");
+        const arr = res.data.filter((item) => item.type == "masalas");
         setData(arr);
       })
-      .catch((err) => {
-        console.log(err);
-      })
-      .finally(() => setloading(false));
+      .catch((err) => console.log(err))
+      .finally(() => {
+        setloading(false);
+      });
   };
   useEffect(() => {
     getData();
-  }, [inpuText]);
+  }, []);
 
   if (loading) {
     return (
@@ -43,6 +36,7 @@ export default function ChickenProducts() {
       </Center>
     );
   }
+
   return (
     <>
       <Flex>
@@ -52,7 +46,7 @@ export default function ChickenProducts() {
           fontWeight={"semibold"}
           fontSize={"25px"}
           pt={2}>
-          Chicken
+          Meat Masalas
         </Heading>
       </Flex>
 

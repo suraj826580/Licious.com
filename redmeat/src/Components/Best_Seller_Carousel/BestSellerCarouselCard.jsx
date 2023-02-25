@@ -73,7 +73,7 @@ function BestSellerCarouselCard(props) {
                 bg: "#D11243",
               }}
               bg={"#D11243"}>
-              Join Now
+              Add To Cart
             </Button>
           </Flex>
           <Divider p={2} />
