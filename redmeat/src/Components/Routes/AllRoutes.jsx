@@ -21,6 +21,12 @@ import Mutton from "../ChickenPoducts/Mutton";
 import MArinades from "../ChickenPoducts/Marinades";
 import Prawns from "../ChickenPoducts/Prawns";
 import Breakfast from "../ChickenPoducts/breakfast";
+import SingleProductPAge from "../SingleProductPage/SingleProductPAge";
+import Spreads from "../ChickenPoducts/Spreads";
+import Kebabs from "../ChickenPoducts/Kebabs";
+import Masalas from "../ChickenPoducts/Masalas";
+import Eggs from "../ChickenPoducts/Eggs";
+import PBM from "../ChickenPoducts/PBM";
 
 export default function AllRoutes() {
   return (
@@ -105,6 +111,67 @@ export default function AllRoutes() {
             <Navbar />
             <Breakfast />
             <DrawerLoginAndSignUp />
+            <Footer />
+          </>
+        }></Route>
+      <Route
+        path="spreads"
+        element={
+          <>
+            <Navbar />
+            <Spreads />
+            <DrawerLoginAndSignUp />
+            <Footer />
+          </>
+        }></Route>
+      <Route
+        path="kebabs"
+        element={
+          <>
+            <Navbar />
+            <Kebabs />
+            <DrawerLoginAndSignUp />
+            <Footer />
+          </>
+        }></Route>
+      <Route
+        path="masalas"
+        element={
+          <>
+            <Navbar />
+            <Masalas />
+            <DrawerLoginAndSignUp />
+            <Footer />
+          </>
+        }></Route>
+      <Route
+        path="eggs"
+        element={
+          <>
+            <Navbar />
+            <Eggs />
+            <DrawerLoginAndSignUp />
+            <Footer />
+          </>
+        }></Route>
+      <Route
+        path="pbm"
+        element={
+          <>
+            <Navbar />
+            <PBM />
+            <DrawerLoginAndSignUp />
+            <Footer />
+          </>
+        }></Route>
+      <Route
+        path={`/products/:id`}
+        element={
+          <>
+            <Navbar />
+            <SingleProductPAge />
+            <DrawerLoginAndSignUp />
+            <Boneless heading="You may also like" />
             <Footer />
           </>
         }></Route>

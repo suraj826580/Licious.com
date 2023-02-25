@@ -12,18 +12,26 @@ import {
 } from "@chakra-ui/react";
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "../Context/GlobalContext";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase";
+import { getAuth, signInWithPhoneNumber } from "firebase/auth";
+
 function DrawerLoginAndSignUp() {
   const [number, setnumber] = useState("");
   const { isOpen, onClose, btnRef } = useContext(GlobalContext);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    createUserWithEmailAndPassword(auth, `+91${number}`)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-    setnumber("");
+    const phoneNumber = `+91${number}`;
+    const auth = getAuth();
+    signInWithPhoneNumber(auth, phoneNumber)
+      .then((confirmationResult) => {
+        window.confirmationResult = confirmationResult;
+        console.log(console.log(confirmationResult));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+
   return (
     <>
       <Drawer

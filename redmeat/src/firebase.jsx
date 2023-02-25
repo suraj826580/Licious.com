@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { getAuth, signInWithPhoneNumber } from "firebase/auth";
+
 const firebaseConfig = {
   apiKey: "AIzaSyDKW4ON1RsrFNJQcWaxJ_ddddsplXFOH-0",
   authDomain: "newredmeat.firebaseapp.com",
@@ -10,4 +11,5 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
+
 export { app, auth };

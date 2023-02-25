@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import SinleCard from "./SingleCard";
 import axios from "axios";
-import { GridItem, Grid, Heading, Stack, Box } from "@chakra-ui/react";
+import {
+  Grid,
+  Heading,
+  Stack,
+  Box,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 export default function ShopByCategoiries(props) {
@@ -40,10 +45,9 @@ export default function ShopByCategoiries(props) {
         m={"0px 10%"}
         mt={10}>
         {Data.map((item) => {
-          console.log(item.link);
           return (
-            <Link to={item.link}>
-              <SinleCard {...item} key={Math.random()} />
+            <Link to={item.link} key={Math.random()} >
+              <SinleCard {...item} />
             </Link>
           );
         })}

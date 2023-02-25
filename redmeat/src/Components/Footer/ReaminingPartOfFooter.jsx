@@ -4,12 +4,10 @@ import {
   ListItem,
   Divider,
   Flex,
-  UnorderedList,
   Box,
   Center,
   Link,
   VStack,
-  Stack,
 } from "@chakra-ui/react";
 const Citylist = [
   "Bengaluru",
@@ -86,7 +84,6 @@ export default function ReaminingPartOfFooter() {
         </Flex>
         <Center>
           <List
-            key={Math.random()}
             mb={5}
             ml={4}
             color={"#4A4A4A"}
@@ -99,6 +96,7 @@ export default function ReaminingPartOfFooter() {
             {Citylist.map((item) => (
               <Link>
                 <ListItem
+                  key={Math.random()}
                   letterSpacing={"1px"}
                   borderRight={"1px solid #4A4A4A"}
                   pr={"10px"}
@@ -125,7 +123,6 @@ export default function ReaminingPartOfFooter() {
         </Flex>
         <Center>
           <List
-            key={Math.random()}
             color={"#4A4A4A"}
             mt={1}
             display={"flex"}
@@ -136,6 +133,7 @@ export default function ReaminingPartOfFooter() {
             {Spreads.map((item) => (
               <Link>
                 <ListItem
+                  key={Math.random()}
                   borderRight={"1px solid"}
                   pr={"10px"}
                   pl={"10px"}
@@ -168,6 +166,7 @@ export default function ReaminingPartOfFooter() {
               <Link>
                 <ListItem
                   borderRight={"1px solid"}
+                  key={Math.random()}
                   pr={"10px"}
                   pl={"10px"}
                   letterSpacing={"1px"}>
@@ -187,7 +186,6 @@ export default function ReaminingPartOfFooter() {
         </Flex>
         <Center>
           <List
-            key={Math.random()}
             color={"#4A4A4A"}
             mt={1}
             display={"flex"}
@@ -198,6 +196,7 @@ export default function ReaminingPartOfFooter() {
             {mutton.map((item) => (
               <Link>
                 <ListItem
+                  key={Math.random() + Date.now()}
                   borderRight={"1px solid"}
                   pr={"10px"}
                   pl={"10px"}
@@ -229,6 +228,7 @@ export default function ReaminingPartOfFooter() {
             {fistandseafood.map((item) => (
               <Link>
                 <ListItem
+                  key={Math.random() + Date.now()}
                   borderRight={"1px solid"}
                   pr={"10px"}
                   pl={"10px"}
@@ -249,7 +249,6 @@ export default function ReaminingPartOfFooter() {
         </Flex>
         <Center>
           <List
-            key={Math.random()}
             color={"#4A4A4A"}
             mt={1}
             display={"flex"}
@@ -260,6 +259,7 @@ export default function ReaminingPartOfFooter() {
             {meatMasala.map((item) => (
               <Link>
                 <ListItem
+                  key={Math.random() + Date.now()}
                   borderRight={"1px solid"}
                   pr={"10px"}
                   pl={"10px"}
@@ -339,7 +339,4 @@ export default function ReaminingPartOfFooter() {
       </Box>
     </>
   );
-}
-{
-  /* <Divider my={4} />; */
 }

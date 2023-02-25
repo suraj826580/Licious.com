@@ -29,6 +29,11 @@ import { GlobalContext } from "./Context/GlobalContext";
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
   const { btnRef, onOpen } = useContext(GlobalContext);
+  const { setinpuText, inpuText } = useContext(GlobalContext);
+
+  const handlechange = (e) => {
+    setinpuText(e.target.value);
+  };
 
   return (
     <Box>
@@ -83,6 +88,8 @@ export default function WithSubnavigation() {
             <Box ml={10}>
               <Stack>
                 <Input
+                  onChange={handlechange}
+                  value={inpuText}
                   ml={20}
                   w={"150%"}
                   transition="1s ease"

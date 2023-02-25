@@ -1,13 +1,4 @@
-import {
-  Box,
-  Center,
-  useColorModeValue,
-  Heading,
-  Text,
-  Stack,
-  Image,
-  GridItem,
-} from "@chakra-ui/react";
+import { Box, Center, Text, Stack, Image, GridItem } from "@chakra-ui/react";
 
 export default function SinleCard(props) {
   return (
@@ -21,7 +12,7 @@ export default function SinleCard(props) {
           // bg={useColorModeValue("white", "gray.800")}
           rounded={"lg"}>
           <Box
-            style={{ "boxShadow": "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" }}
+            style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" }}
             rounded={"lg"}
             p={3}
             mt={-12}
