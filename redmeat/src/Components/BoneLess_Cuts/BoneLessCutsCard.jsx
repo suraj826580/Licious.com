@@ -10,10 +10,14 @@ import {
   Divider,
   Center,
 } from "@chakra-ui/react";
+import { useContext } from "react";
 
 import { FiShoppingCart } from "react-icons/fi";
+import { Link } from "react-router-dom";
+import { GlobalContext } from "../Context/GlobalContext";
 
 function BoneLessCard(props) {
+  const { getcartData, toast } = useContext(GlobalContext);
   return (
     <Flex p={3} w="full" alignItems="center" justifyContent="center">
       <Box
@@ -22,15 +26,17 @@ function BoneLessCard(props) {
           borderRadius: "10px",
           overflow: "hidden",
         }}>
-        <Image
-          src={props.images}
-          alt={`Picture of ${props.name}`}
-          roundedTop="lg"
-          transition="all .3s ease-in-out"
-          _hover={{
-            transform: "scale(1.1)",
-          }}
-        />
+        <Link to={`/products/${props.id}`}>
+          <Image
+            src={props.images}
+            alt={`Picture of ${props.name}`}
+            roundedTop="lg"
+            transition="all .3s ease-in-out"
+            _hover={{
+              transform: "scale(1.1)",
+            }}
+          />
+        </Link>
 
         <Box p="6">
           <Flex mt="1" justifyContent="space-between" alignContent="center">
@@ -51,8 +57,22 @@ function BoneLessCard(props) {
               color={"red.600"}
               borderRadius={10}
               fontSize={"1.0em"}>
-              <chakra.a href={"#"} display={"flex"}>
-                <Icon as={FiShoppingCart} h={7} w={7} alignSelf={"center"} />
+              <chakra.a display={"flex"}>
+                <Icon
+                  onClick={() => {
+                    getcartData(props.id);
+                    toast({
+                      title: "Added to Your Cart.",
+                      status: "success",
+                      duration: 2000,
+                      isClosable: true,
+                    });
+                  }}
+                  as={FiShoppingCart}
+                  h={7}
+                  w={7}
+                  alignSelf={"center"}
+                />
               </chakra.a>
             </Tooltip>
           </Flex>
@@ -69,6 +89,15 @@ function BoneLessCard(props) {
               {props.price}
             </Box>
             <Button
+              onClick={() => {
+                getcartData(props.id);
+                toast({
+                  title: "Added to Your Cart.",
+                  status: "success",
+                  duration: 2000,
+                  isClosable: true,
+                });
+              }}
               color="#fff"
               _hover={{
                 bg: "#D11243",

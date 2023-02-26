@@ -28,7 +28,7 @@ import { Link } from "react-router-dom";
 import { GlobalContext } from "./Context/GlobalContext";
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
-  const { btnRef, onOpen } = useContext(GlobalContext);
+  const { btnRef, onOpen, btnRefer, onOpener } = useContext(GlobalContext);
   const { setinpuText, inpuText } = useContext(GlobalContext);
 
   const handlechange = (e) => {
@@ -113,14 +113,6 @@ export default function WithSubnavigation() {
           spacing={16}
           mr={10}>
           <Button
-            as={"a"}
-            fontSize={"md"}
-            fontWeight={400}
-            variant={"link"}
-            href={"#"}>
-            Categories
-          </Button>
-          <Button
             ref={btnRef}
             onClick={onOpen}
             as={"a"}
@@ -130,6 +122,8 @@ export default function WithSubnavigation() {
             Log In
           </Button>
           <Button
+            onClick={onOpener}
+            ref={btnRefer}
             as={"a"}
             display={{ base: "none", md: "inline-flex" }}
             fontSize={"md"}
