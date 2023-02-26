@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Box, Image, Heading } from "@chakra-ui/react";
 import BestSellerCarouselCard from "../Best_Seller_Carousel/BestSellerCarouselCard";
 import axios from "axios";
+import { Link } from "react-router-dom";
 export default function BestSeller(props) {
   const [data, setdata] = useState([]);
   const getData = () => {
@@ -12,7 +13,7 @@ export default function BestSeller(props) {
       .get("https://63c71d3cd307b76967472ac6.mockapi.io/products")
       .then((res) => {
         const filterarray = res.data.filter(
-          (el, id) => el.type === "fishAndSeedFood" || el.type == "chicken"
+          (el, id) => el.type === "fishAndSeedFood"
         );
         setdata(filterarray);
       })
@@ -96,4 +97,8 @@ export default function BestSeller(props) {
       </Slider>
     </>
   );
+}
+{
+  /* <Link to={`/products/${item.id}`} >
+</Link> */
 }

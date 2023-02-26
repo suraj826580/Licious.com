@@ -2,7 +2,7 @@ import React, { Component, useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Box, Image, Heading } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 import axios from "axios";
 import BreakFastAndSnackingCard from "./BreakFastAndSnackingCard";
 
@@ -15,7 +15,7 @@ export default function BreakFastAndSnacking(props) {
         const filterarray = res.data.filter(
           (el, id) => el.type === "BreakfastAndSnacking"
         );
-          
+
         setdata(filterarray);
       })
       .catch((err) => console.log(err));

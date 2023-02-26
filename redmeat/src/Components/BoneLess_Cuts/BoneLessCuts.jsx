@@ -13,7 +13,7 @@ export default function Boneless(props) {
       .get("https://63c71d3cd307b76967472ac6.mockapi.io/products")
       .then((res) => {
         const filterarray = res.data.filter(
-          (el, id) => el.type == "fishAndSeedFood" || el.type === "Carousel1"
+          (el, id) => el.type === "Carousel1"
         );
 
         setdata(filterarray);

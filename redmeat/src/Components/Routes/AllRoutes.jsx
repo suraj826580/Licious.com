@@ -27,6 +27,7 @@ import Kebabs from "../ChickenPoducts/Kebabs";
 import Masalas from "../ChickenPoducts/Masalas";
 import Eggs from "../ChickenPoducts/Eggs";
 import PBM from "../ChickenPoducts/PBM";
+import CartDrawer from "../LoginAndSignUpDrawer.jsx/CartDrawer";
 
 export default function AllRoutes() {
   return (
@@ -52,6 +53,7 @@ export default function AllRoutes() {
             <BottomBanner />
             <Footer />
             <DrawerLoginAndSignUp />
+            <CartDrawer />
           </div>
         }></Route>
       <Route
@@ -62,6 +64,7 @@ export default function AllRoutes() {
             <ChickenProducts />
             <DrawerLoginAndSignUp />
             <Footer />
+            <CartDrawer />
           </>
         }></Route>
       <Route
@@ -72,6 +75,7 @@ export default function AllRoutes() {
             <FishAndSeeDFood />
             <DrawerLoginAndSignUp />
             <Footer />
+            <CartDrawer />
           </>
         }></Route>
       <Route
@@ -82,6 +86,7 @@ export default function AllRoutes() {
             <Mutton />
             <DrawerLoginAndSignUp />
             <Footer />
+            <CartDrawer />
           </>
         }></Route>
       <Route
@@ -92,6 +97,7 @@ export default function AllRoutes() {
             <MArinades />
             <DrawerLoginAndSignUp />
             <Footer />
+            <CartDrawer />
           </>
         }></Route>
       <Route
@@ -102,6 +108,7 @@ export default function AllRoutes() {
             <Prawns />
             <DrawerLoginAndSignUp />
             <Footer />
+            <CartDrawer />
           </>
         }></Route>
       <Route
@@ -112,6 +119,7 @@ export default function AllRoutes() {
             <Breakfast />
             <DrawerLoginAndSignUp />
             <Footer />
+            <CartDrawer />
           </>
         }></Route>
       <Route
@@ -122,6 +130,7 @@ export default function AllRoutes() {
             <Spreads />
             <DrawerLoginAndSignUp />
             <Footer />
+            <CartDrawer />
           </>
         }></Route>
       <Route
@@ -132,6 +141,7 @@ export default function AllRoutes() {
             <Kebabs />
             <DrawerLoginAndSignUp />
             <Footer />
+            <CartDrawer />
           </>
         }></Route>
       <Route
@@ -142,6 +152,7 @@ export default function AllRoutes() {
             <Masalas />
             <DrawerLoginAndSignUp />
             <Footer />
+            <CartDrawer />
           </>
         }></Route>
       <Route
@@ -152,6 +163,7 @@ export default function AllRoutes() {
             <Eggs />
             <DrawerLoginAndSignUp />
             <Footer />
+            <CartDrawer />
           </>
         }></Route>
       <Route
@@ -162,6 +174,7 @@ export default function AllRoutes() {
             <PBM />
             <DrawerLoginAndSignUp />
             <Footer />
+            <CartDrawer />
           </>
         }></Route>
       <Route
@@ -172,6 +185,7 @@ export default function AllRoutes() {
             <SingleProductPAge />
             <DrawerLoginAndSignUp />
             <Boneless heading="You may also like" />
+            <CartDrawer />
             <Footer />
           </>
         }></Route>
