@@ -25,7 +25,7 @@ export default function BreakFastAndSnacking(props) {
     getData();
   }, []);
   var settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -39,7 +39,7 @@ export default function BreakFastAndSnacking(props) {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
+          // dots: true,
         },
       },
       {

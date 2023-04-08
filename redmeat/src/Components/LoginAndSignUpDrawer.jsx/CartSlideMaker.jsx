@@ -1,20 +1,22 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Box, Flex, Divider, useToast } from "@chakra-ui/react";
 import { GlobalContext } from "../Context/GlobalContext";
+
 export default function CartSlideMaker(props) {
-  const [quant, setquant] = useState(props.quantity);
   const toast = useToast();
   const arr = JSON.parse(localStorage.getItem("cart")) || [];
+  const [quant, setquant] = useState(props.quantity);
+
   const handleDelete = (id) => {
     const newArray = arr.filter((item) => {
-      return item.id != id;
+      return item.id !== id;
     });
     localStorage.setItem("cart", JSON.stringify(newArray));
   };
 
   const handleQuant = (id) => {
     const item = arr.map((item) => {
-      return item.id == id ? { ...item, quantity: quant } : { ...item };
+      return item.id === id ? { ...item, quantity: quant } : { ...item };
     });
     localStorage.setItem("cart", JSON.stringify(item));
   };
@@ -41,6 +43,7 @@ export default function CartSlideMaker(props) {
                 duration: 2000,
                 isClosable: true,
               });
+              setdel(!del);
             }}
             style={{
               backgroundColor: "red",
@@ -62,9 +65,10 @@ export default function CartSlideMaker(props) {
         <Box mt={1}>
           <Flex alignItems={"center"} mt={1} gap={2}>
             <button
-              disabled={quant == 1}
+              disabled={quant === 1}
               onClick={() => {
                 setquant((pre) => pre - 1);
+                handleQuant(props.id);
               }}
               style={{
                 backgroundColor: "#CFD8DC",
@@ -77,7 +81,6 @@ export default function CartSlideMaker(props) {
             <Box>{quant}</Box>
             <button
               onClick={() => {
-                setdel(!del);
                 setquant((pre) => pre + 1);
                 handleQuant(props.id);
               }}

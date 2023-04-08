@@ -1,6 +1,6 @@
 import {
   Box,
-  chakra,
+  useToast,
   Container,
   Stack,
   Text,
@@ -13,9 +13,13 @@ import {
   StackDivider,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { useContext } from "react";
 import { MdLocalShipping } from "react-icons/md";
+import { GlobalContext } from "../Context/GlobalContext";
 
 export default function SingleProductPageCardMaker(props) {
+  const toast = useToast();
+  const { getcartData } = useContext(GlobalContext);
   return (
     <Container maxW={"7xl"}>
       <SimpleGrid
@@ -83,6 +87,15 @@ export default function SingleProductPageCardMaker(props) {
             </VStack>
           </Stack>
           <Button
+            onClick={() => {
+              getcartData(props.id);
+              toast({
+                title: "Added to Your Cart.",
+                status: "success",
+                duration: 2000,
+                isClosable: true,
+              });
+            }}
             rounded={"none"}
             w={"full"}
             size={"lg"}

@@ -1,11 +1,10 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Box, Image, Heading } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 import BestSellerCarouselCard from "../Best_Seller_Carousel/BestSellerCarouselCard";
 import axios from "axios";
-import { Link } from "react-router-dom";
 export default function BestSeller(props) {
   const [data, setdata] = useState([]);
   const getData = () => {
@@ -24,7 +23,7 @@ export default function BestSeller(props) {
     getData();
   }, []);
   var settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -38,7 +37,7 @@ export default function BestSeller(props) {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
+          // dots: true,
         },
       },
       {

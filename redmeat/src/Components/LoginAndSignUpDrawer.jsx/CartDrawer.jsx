@@ -10,11 +10,12 @@ import {
   Box,
   Center,
 } from "@chakra-ui/react";
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../Context/GlobalContext";
 import CartSlideMaker from "./CartSlideMaker";
 
 export default function CartDrawer() {
+  
   const { isOpener, onCloser, btnRefer, del } = useContext(GlobalContext);
   const arr = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -41,7 +42,14 @@ export default function CartDrawer() {
             {arr.length <= 0 ? (
               <Center>Oops! Your Cart Is Empty</Center>
             ) : (
-              arr.map((item, id) => <CartSlideMaker {...item} no={id + 1} />)
+              arr.map((item, id) => (
+                <CartSlideMaker
+                  // quant={quant}
+                  // setquant={setquant}
+                  {...item}
+                  no={id + 1}
+                />
+              ))
             )}
           </DrawerBody>
 
